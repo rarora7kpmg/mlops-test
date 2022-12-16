@@ -1,13 +1,13 @@
 targetScope = 'subscription'
 
-param location string = 'westus2'
+param location string = 'australiaeast'
 param prefix string
 param postfix string
 param env string 
 
 param tags object = {
-  Owner: 'mlops-v2'
-  Project: 'mlops-v2'
+  Owner: 'mlops-test'
+  Project: 'mlops-test'
   Environment: env
   Toolkit: 'bicep'
   Name: prefix
@@ -19,7 +19,6 @@ var resourceGroupName = 'rg-${baseName}'
 resource rg 'Microsoft.Resources/resourceGroups@2020-06-01' = {
   name: resourceGroupName
   location: location
-
   tags: tags
 }
 
