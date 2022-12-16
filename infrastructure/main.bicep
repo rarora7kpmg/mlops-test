@@ -10,7 +10,8 @@ param tags object = {
   Project: 'mlops-test'
   Environment: env
   Toolkit: 'bicep'
-  Name: prefix
+  Name: prefix,
+  application:'mlops-test'
 }
 
 var baseName  = '${prefix}-${postfix}${env}'
